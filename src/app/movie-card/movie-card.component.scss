@@ -1,0 +1,46 @@
+.movie-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #aaaaaa;
+}
+  
+.mat-card-container {
+    max-width: 285px;
+    margin: 2rem 1rem;
+    height: 565px;
+}
+  
+.directedBy {
+    color: #000000;
+}
+
+.genre {
+    color: #000000;
+}
+.img {
+    width: 100%;
+    height: 70%;
+    margin: auto;
+}
+  
+.movie-btn {
+    background-color: black;
+    color: #f09f9f;
+    padding: 1rem;
+}
+
+.buttons {
+    margin-left: 6px;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-evenly;
+}
+
+.favorite-button {
+    background-color: rgb(0, 0, 0);
+    color: #f09f9f;
+    padding: 0.05rem 0.5rem;
+}
