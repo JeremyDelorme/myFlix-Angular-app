@@ -16,7 +16,7 @@
             </mat-card-subtitle>
         </mat-card-header>
         <img class="img" src={{movie.ImagePath}} style="width: 280px;" />
-        <mat-card-actions>
+        <mat-card-actions class="syn-fav-buttons" >
             <button class="synopsis-button" mat-button (click)="openSynopsisDialog(movie.Title, movie.Description)">
                 Synopsis
             </button>
