@@ -10,7 +10,6 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    // "normalTypeScriptOptions": "here",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -24,12 +23,12 @@
       "dom"
     ]
   },
-  // "typedocOptions": {
-  //   "entryPoints": [
-  //     "src/index.ts"
-  //   ],
-  //   "out": "docs"
-  // },
+  "typedocOptions": {
+    "entryPoints": [
+      "src/app/movie-card/movie-card.component.ts"
+    ],
+    "out": "docs"
+  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
