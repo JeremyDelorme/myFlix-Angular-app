@@ -1,4 +1,13 @@
 .navbar {
+    display: flex;
     border-bottom: 20px;
-    background-color: #f09f9f;
+    background-color: #bdbdbd;
+    height: 70px;
+    justify-content: left;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar-buttons {
+    font-size: 25px;
+    font-family: "Josefin Sans", sans-serif;
 }
