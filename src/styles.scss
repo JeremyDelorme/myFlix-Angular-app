@@ -50,6 +50,15 @@ html, body { height: 100%; }
   font-family: 'Josefin Sans', sans-serif !important;
 }
 
+.cdk-overlay-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
 
 
 

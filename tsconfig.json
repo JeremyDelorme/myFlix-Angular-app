@@ -23,12 +23,6 @@
       "dom"
     ]
   },
-  "typedocOptions": {
-    "entryPoints": [
-      "src/app/movie-card/movie-card.component.ts"
-    ],
-    "out": "docs"
-  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
