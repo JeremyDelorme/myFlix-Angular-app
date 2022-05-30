@@ -16,6 +16,11 @@ const username = localStorage.getItem('username');
 export class UserRegistrationService {
   constructor(private http: HttpClient) { }
 
+  /**
+   * calls API endpoint to register a new user
+   * @param userDetails 
+   * @returns a new user object in JSON format
+   */
   //Registration Endpoint
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
@@ -23,6 +28,12 @@ export class UserRegistrationService {
       catchError(this.handleError)
     );
   }
+
+  /**
+ * calls API endpoint to login an existing user
+ * @param userDetails 
+ * @returns data of the user in JSON format
+ */
   // Login Endpoint
   public userLogin(userDetails: any): Observable<any> {
     console.log(userDetails);
@@ -31,6 +42,10 @@ export class UserRegistrationService {
     );
   }
 
+  /**
+ * calls API endpoint to get data on all movies
+ * @returns array of all movies in JSON format
+ */
   // Get List Of All Movies Endpoint
   getAllMovies(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -43,6 +58,12 @@ export class UserRegistrationService {
       catchError(this.handleError)
     );
   }
+
+  /**
+ * calls API endpoint to get data on a single movie specified by its title
+ * @param title 
+ * @returns JSON object holding movie data
+ */
   // Get A Single Movie Endpoint
   getSingleMovie(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -56,6 +77,12 @@ export class UserRegistrationService {
       catchError(this.handleError)
     );
   }
+
+  /**
+ * calls API endpoint to get data on a director
+ * @param name 
+ * @returns JSON obejct holding director data
+ */
   // Get Director Details Endpoint
   getDirector(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -69,6 +96,12 @@ export class UserRegistrationService {
       catchError(this.handleError)
     );
   }
+
+  /**
+ * calls API endpoint to get data on a genre
+ * @param name 
+ * @returns JSON object holding genre data
+ */
   // Get Genre Details Endpoint
   getGenre(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -83,6 +116,10 @@ export class UserRegistrationService {
     );
   }
 
+  /**
+ * calls API endpoint to get data on a single user
+ * @returns JSON object holding data about the requested user
+ */
   // Get Profile Details Endpoint
   getUserProfile(): Observable<any> {
     // Get Authorization token stored in local storage
@@ -100,6 +137,11 @@ export class UserRegistrationService {
         catchError(this.handleError)
       );
   }
+
+  /**
+* calls API endpoint to get list of favorite movies of this user
+* @returns list of the user's favorite movies in JSON format
+*/
   // Get Favorite Movies Endpoint
   getFavoriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -114,6 +156,13 @@ export class UserRegistrationService {
       catchError(this.handleError)
     );
   }
+
+  /**
+   * calls API endpoint to add a movie to the user's list of favorite movies
+   * @param movieID 
+   * @returns JSON object holding data about the updated user
+   */
+
   // Add A Movie To The List Of Favorites Endpoint
   addToFavoriteMovies(movieID: string): Observable<any> {
     // Get Authorization token stored in local storage
@@ -131,7 +180,13 @@ export class UserRegistrationService {
         catchError(this.handleError)
       );
   }
-  // Remove A Movie From The List Of Favorites Endpoint
+
+  /**
+ * calls API endpoint to delete a movie from the user's list of favorite movies
+ * @param movieID 
+ * @returns JSON object holding data about the updated user
+ */
+  // Delete A Movie From The List Of Favorites Endpoint
   deleteFavoriteMovies(id: string): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('username');
@@ -146,6 +201,11 @@ export class UserRegistrationService {
     );
   }
 
+  /**
+ * calls API endpoint to allow user to update their user information
+ * @param updateDetails 
+ * @returns JSON object holding data about the updated user
+ */
   // Update Profile Details Endpoint
   editUserProfile(updateDetails: any): Observable<any> {
     // Get Authorization token stored in local storage
@@ -163,6 +223,11 @@ export class UserRegistrationService {
         catchError(this.handleError)
       );
   }
+
+  /**
+ * calls API endpoint to deregister an existing user
+ * @returns	A success message indicating that the profile was successfully deleted.
+ */
   // Delete Profile Endpoint
   public deleteUserProfile(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -178,10 +243,21 @@ export class UserRegistrationService {
     );
   }
 
+  /**
+ * extracts response data from HTTP response
+ * @param data 
+ * @returns response body or empty object
+ */
   // Response Of Data Extraction
   private extractResponseData(data: any | Object): any {
     return data || {};
   }
+
+  /**
+ * handles errors
+ * @param error 
+ * @returns error message
+ */
   // Error-Handling Function
   private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {
