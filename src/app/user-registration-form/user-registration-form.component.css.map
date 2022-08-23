@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "user-registration-form.component.scss"
+    ],
+    "names": [],
+    "file": "user-registration-form.component.css"
+}
