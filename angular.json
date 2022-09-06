@@ -110,5 +110,7 @@
       }
     }
   },
-  "defaultProject": "myFlix-Angular-client"
+  "cli": {
+    "analytics": false
+  }
 }
