@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError, catchError } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
 //Declaring the api url that will provide data for the client app
 const apiUrl = 'https://movie-api-jeremydelorme.herokuapp.com/';
-//get token from localStorage
-const token = localStorage.getItem('token');
-//get username from localStorage
-const username = localStorage.getItem('username');
+// //get token from localStorage
+// const token = localStorage.getItem('token');
+// //get username from localStorage
+// const username = localStorage.getItem('username');
 @Injectable({
   providedIn: 'root'
 })
 
-export class UserRegistrationService {
+export class FetchApiDataService {
   constructor(private http: HttpClient) { }
 
   /**
@@ -125,9 +125,9 @@ export class UserRegistrationService {
     // Get Authorization token stored in local storage
     const token = localStorage.getItem('token');
     // Get Username stored in local storage
-    const username = localStorage.getItem('user');
+    const user = localStorage.getItem('user');
     return this.http
-      .get(apiUrl + `users/${username}`, {
+      .get(apiUrl + `users/${user}`, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         })
@@ -145,8 +145,8 @@ export class UserRegistrationService {
   // Get Favorite Movies Endpoint
   getFavoriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
-    const username = localStorage.getItem('username');
-    return this.http.get(apiUrl + `users/${username}`, {
+    const user = localStorage.getItem('user');
+    return this.http.get(apiUrl + `users/${user}/movies`, {
       headers: new HttpHeaders(
         {
           Authorization: 'Bearer ' + token,
@@ -168,9 +168,9 @@ export class UserRegistrationService {
     // Get Authorization token stored in local storage
     const token = localStorage.getItem('token');
     // Get Username stored in local storage
-    const username = localStorage.getItem('user');
+    const user = localStorage.getItem('user');
     return this.http
-      .patch(apiUrl + `users/${username}/movies/${movieID}`, null, {
+      .patch(apiUrl + `users/${user}/movies/${movieID}`, null, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         })

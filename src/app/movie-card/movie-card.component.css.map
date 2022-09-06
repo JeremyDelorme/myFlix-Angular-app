@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "movie-card.component.scss"
+    ],
+    "names": [],
+    "file": "movie-card.component.css"
+}

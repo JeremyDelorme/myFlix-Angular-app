@@ -1,8 +1,8 @@
-<mat-card class="cdk-overlay-container">
+<mat-card>
     <mat-card-header>
-        <mat-card-title class="cdk-overlay-container">Edit your profile information</mat-card-title>
+        <mat-card-title>Edit your profile information</mat-card-title>
     </mat-card-header>
-    <mat-card-content class="cdk-overlay-container">
+    <mat-card-content>
         <form>
             <mat-form-field>
                 <input matInput [(ngModel)]="userData.Username" placeholder="Username" type="text" name="Username">
@@ -18,11 +18,11 @@
             </mat-form-field>
         </form>
     </mat-card-content>
-    <mat-card-actions class="edit-profile-actions">
-        <button mat-raised-button (click)="editUserProfile()" color="primary">
+    <mat-card-actions>
+        <button mat-raised-button (click)="editUserProfile()">
             Update your details
         </button>
-        <button mat-stroked-button aria-label="Close the edit profile button" mat-dialog-close color="primary">
+        <button mat-stroked-button aria-label="Close the edit profile button" mat-dialog-close>
             X
         </button>
     </mat-card-actions>

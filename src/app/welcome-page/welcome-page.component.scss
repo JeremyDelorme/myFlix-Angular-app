@@ -1,17 +1,20 @@
-.welcome-page {
-display: flex;
-justify-content: center;
-padding-top: 300px;
-width: 100%;
-height: auto;
-}
-
 .welcome-card {
-font-size: 35px;
+display: flex;
+flex-direction: column;
+font-family: 'Josefin Sans', 'sans-serif';
+width: 100%;
+justify-content: center;
+align-items: center;
 }
 
 .welcome-card-header {
-font-size: 50px;
+display: flex;
+justify-content: center;
+margin-bottom: 50px;
+}
+
+.welcome-card-title {
+    font-size: 75px;
 }
 
 .welcome-card-actions {
@@ -19,11 +22,4 @@ display: flex;
 justify-content: center;
 }
 
-.buttons {
-    font-size: 18px;
-    font-family: "Josefin Sans", sans-serif;
-}
 
-.mat-card {
-    width: 300px;
-}

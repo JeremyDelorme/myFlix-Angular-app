@@ -7,7 +7,7 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-// @include mat.core();
+@include mat.core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -40,25 +40,207 @@ $myFlix-Angular-client-theme: mat.define-light-theme((
   src: url(assets/fonts/JosefinSans-VariableFont_wght.ttf) format('truetype');
 }
 
-// .Josefin {
-//   font-family: 'Josefin Sans', sans-serif;
+//GENERAL
+
+html, body { 
+  height: 100%;
+  width: 100%;
+  // margin: 0; 
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #fad7bf;
+  margin: 0px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+// h2 {
+//   font-size: 30px;
 // }
 
-html, body { height: 100%; }
-.body {
-  margin: 0;
-  font-family: 'Josefin Sans', sans-serif !important;
+
+//WELCOME 
+
+.welcome-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  }
+
+//NAVBAR
+.navbar {
+  display: flex;
+  border-bottom: 20px;
+  background-color: #fce2ac;
+  height: 70px;
+  justify-content: left;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
+.navbar-buttons {
+  font-size: 25px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navbar-img {
+  width: 2%;
+  height: 50%;
+}
+
+//DIALOG-CONTAINERS
 
 .cdk-overlay-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin-top: 20px;
+  background-color: transparent;
+  box-shadow: 100%;
 }
 
+.mat-dialog-container {
+  display: flex;
+  background-color: rgb(219, 204, 185);
+  border-radius: 5px;
+  width: 100%;
+}
+.mat-card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(253, 243, 230);
+  font-family: 'Josefin Sans', 'sans-serif';
+  border: 20px;
+}
+
+.mat-card-content {
+  display: flex;
+  justify-content: center;
+  font-size: auto;
+  // margin: 50px;
+  width: 100%;
+}
+
+// .mat-form-field-infix {
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+.mat-card-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.mat-card-header .mat-card-title {
+  margin-bottom: 12px;
+  font-size: 34px;
+}
+
+.mat-button {
+  font-family: 'Josefin Sans', 'sans-serif';
+}
+
+.mat-button:hover {
+  background-color: rgb(231, 231, 231);
+  color: rgb(0, 0, 0);
+  border-radius: 0px;
+}
+
+.mat-raised-button {
+  font-family: 'Josefin Sans', 'sans-serif';
+  font-weight: bold;
+  background-color: #6b1515;
+  width: auto;
+  // font-size: 24px;
+  margin: 40px;
+  color: white;
+}
+
+.mat-raised-button:hover {
+  background-color: rgb(231, 231, 231);
+  color: rgb(0, 0, 0);
+  border-radius: 0px;
+}
+
+.mat-stroked-button {
+  border: 1px solid currentColor;
+  padding: 20px;
+  line-height: 34px;
+  margin: 30px;
+}
+
+//MOVIE CARD
+
+
+.movie-mat-dialog-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(247, 229, 224);
+  justify-content: center;
+  // font-size: 38px;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.movie-mat-card {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5%;
+  background-color: rgb(255, 249, 240);
+  margin: 20px;
+  border-radius: 5px;
+  // font-size: 38px;
+  height: 500px;
+  width: 400px;
+}
+
+.movie-mat-card-title {
+  display: flex;
+  background-color: aqua;
+}
+.movie-img {
+  width: 200px;
+  height: 300px;
+}
+
+.movie-mat-card-actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.movie-buttons {
+  background-color: #ffe1bb;
+  color: rgb(92, 48, 23);
+}
+
+//PROFILE
+
+.profile-mat-card {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.profile-div {
+  // width: 100%;
+  // height: 100%;
+}
+
+.profile-mat-card-content {
+  // font-size: 32px;
+}
+
+.delete-profile-button {
+  background-color: rgb(51, 51, 51);
+}
 
 
 

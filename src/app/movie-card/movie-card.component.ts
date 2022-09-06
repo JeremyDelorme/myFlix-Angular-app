@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegistrationService } from '../fetch-api-data.service';
+import { FetchApiDataService } from '../fetch-api-data.service';
 
 import { GenreComponent } from '../genre/genre.component';
 import { DirectorComponent } from '../director/director.component';
@@ -14,11 +14,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent implements OnInit {
+  // user: any = {};
+  // username = localStorage.getItem('user');
   movies: any[] = [];
   favoriteMovies: any[] = [];
 
   constructor(
-    public fetchApiData: UserRegistrationService,
+    public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
     public snackBar: MatSnackBar
   ) { }
@@ -26,7 +28,7 @@ export class MovieCardComponent implements OnInit {
   ngOnInit(): void {
     this.getMovies();
     this.getFavoriteMovies();
-    this.getCurrentUser();
+    // this.getCurrentUser();
   }
 
   /**
@@ -75,7 +77,6 @@ export class MovieCardComponent implements OnInit {
         Name: name,
         Description: description,
       },
-      width: '500px'
     });
   }
 
@@ -83,17 +84,13 @@ export class MovieCardComponent implements OnInit {
   * Opens the user director dialog from DirectorComponent to displaying details
   * @param name
   * @param bio
-  * @param birthday
   */
-  openDirectorDialog(name: string, bio: string, birthday: Date): void {
+  openDirectorDialog(name: string, bio: string): void {
     this.dialog.open(DirectorComponent, {
       data: {
         Name: name,
         Bio: bio,
-        Birthday: birthday,
       },
-      // Assign dialog width
-      width: '500px'
     });
 
   }
@@ -109,35 +106,32 @@ export class MovieCardComponent implements OnInit {
         Title: title,
         Description: description,
       },
-      // Assign dialog width
-      width: '500px'
     });
 
   }
 
-  getCurrentUser(): void {
-    const username = localStorage.getItem('user');
-    this.fetchApiData.getUserProfile().subscribe((resp: any) => {
-      console.log(resp)
-      const currentUser = resp.Username
-      console.log(currentUser)
-      const currentFavs = resp.favoriteMovies
-      console.log(currentFavs)
-    });
-  }
+  // getCurrentUser(): void {
+  //   const username = localStorage.getItem('user');
+  //   this.fetchApiData.getUserProfile().subscribe((resp: any) => {
+  //     console.log(resp)
+  //     const currentUser = resp.Username
+  //     console.log(currentUser)
+  //     const currentFavs = resp.favoriteMovies
+  //     console.log(currentFavs)
+  //   });
+  // }
 
   /**
-   * Adds a movie to the list of favorite movies via an API call
+   * adds a movie to the list of favorite movies via an API call
    * @param id 
-   * @function addToFavoriteMovies
+   * @function addFavoriteMovie
    */
-  addToFavoriteMovies(id: string, title: string): void {
-    this.fetchApiData.addToFavoriteMovies(id).subscribe((res: any) => {
-      this.snackBar.open(`${title} has been added to your favourites!`, 'OK', {
-        duration: 3000,
-      });
+  addToFavoriteMovies(id: string): void {
+    console.log(id);
+    this.fetchApiData.addToFavoriteMovies(id).subscribe((result) => {
+      console.log(result);
       this.ngOnInit();
-    });
+    })
   }
 
   /**
@@ -147,8 +141,8 @@ export class MovieCardComponent implements OnInit {
    */
   removeFromFavoriteMovies(id: string): void {
     console.log(id);
-    this.fetchApiData.deleteFavoriteMovies(id).subscribe((response) => {
-      console.log(response);
+    this.fetchApiData.deleteFavoriteMovies(id).subscribe((result) => {
+      console.log(result);
       this.ngOnInit();
     })
   }
