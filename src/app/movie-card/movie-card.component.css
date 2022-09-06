@@ -9,7 +9,7 @@
           justify-content: center;
   margin: 0 auto;
   width: 100%;
-  background-color: #ffecdf;
+  background-color: #000000a2;
 }
 
 .mat-card-container {
@@ -96,9 +96,25 @@
   font-weight: bold;
 }
 
+.synopsis-button:hover {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
 .favorite-button {
   font-family: "Josefin Sans", sans-serif;
   font-size: 22px;
   font-weight: bold;
+  color: #ff7a7a;
+}
+
+.favorite-button:hover {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f84545;
+  background-color: transparent;
 }
 /*# sourceMappingURL=movie-card.component.css.map */
