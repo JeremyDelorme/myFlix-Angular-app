@@ -4,7 +4,7 @@
     justify-content: center;
     margin: 0 auto;
     width: 100%;
-    background-color: #920000a2;
+    background-color: #6b1515;
 }
   
 .mat-card-container {
@@ -12,6 +12,7 @@
     margin: 2rem 1rem;
     height: 565px;
     text-align: center;
+    min-width: 400px;
 }
   
 .mat-card {
@@ -20,29 +21,31 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 5%;
-    background-color: #fffdf8;
+    border-radius: 2%;
+    background-color: #fdf3e6;
     max-width: fit-content;
-    max-height: fit-content;
+    // max-height: fit-content;
+    border: none;
+    padding: 20px;
 }
 
 .mat-card-title {
     display: flex;
     justify-content: center;
     text-align: center;
-    // margin-left: 35px;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 //allo
 
 .directedBy {
     color: #000000;
+    font-size: 24px;
 }
 
 .genre {
     color: #000000;
-    // padding-left: 36px;
+    font-size: 24px;
 }
 .img {
     width: 100%;
