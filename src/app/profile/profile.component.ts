@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegistrationService } from '../fetch-api-data.service';
+import { fetchApiData } from '../fetch-api-data.service';
 
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
   displayElement: boolean = false
 
   constructor(
-    public fetchApiData: UserRegistrationService,
+    public fetchApiData: fetchApiData,
     public dialog: MatDialog,
     public router: Router,
     public snackBar: MatSnackBar

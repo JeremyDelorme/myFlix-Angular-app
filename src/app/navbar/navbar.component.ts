@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegistrationService } from '../fetch-api-data.service';
+import { fetchApiData } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -11,7 +11,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 })
 export class NavbarComponent implements OnInit {
   constructor(
-    public fetchApiData: UserRegistrationService,
+    public fetchApiData: fetchApiData,
     public router: Router,
     public snackBar: MatSnackBar,
     public dialog: MatDialogModule

@@ -13,7 +13,7 @@ const username = localStorage.getItem('username');
   providedIn: 'root'
 })
 
-export class UserRegistrationService {
+export class fetchApiData {
   constructor(private http: HttpClient) { }
 
   /**
