@@ -1,10 +1,13 @@
 {
   "name": "my-flix-angular-client",
   "version": "0.0.0",
+  "homepage": "https://JeremyDelorme.github.io/myFlix-Angular-app",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./app/",
