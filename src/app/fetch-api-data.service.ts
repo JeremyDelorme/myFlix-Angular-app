@@ -13,7 +13,7 @@ const apiUrl = 'https://movie-api-jeremydelorme.herokuapp.com/';
   providedIn: 'root'
 })
 
-export class FetchApiDataService {
+export class fetchApiData {
   constructor(private http: HttpClient) { }
 
   /**

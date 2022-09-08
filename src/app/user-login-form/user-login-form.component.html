@@ -1,8 +1,8 @@
-<mat-card class="login-dialog">
+<mat-card>
     <mat-card-header>
-        <mat-card-title class="login-dialog-title">Login into your account</mat-card-title>
+        <mat-card-title>Login into your account</mat-card-title>
     </mat-card-header>
-    <mat-card-content class="login-dialog-content">
+    <mat-card-content>
         <form>
             <mat-form-field>
                 <input matInput [(ngModel)]="userCredentials.Username" placeholder="Username" type="text"
@@ -14,7 +14,7 @@
             </mat-form-field>
         </form>
     </mat-card-content>
-    <mat-card-actions class="login-actions">
+    <mat-card-actions>
         <button mat-raised-button (click)="loginUser()">
             Login
         </button>

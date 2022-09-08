@@ -1,33 +1,21 @@
-.welcome-card {
+.welcome-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: 'Josefin Sans', 'sans-serif';
-  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.welcome-card {
+  font-size: 35px;
 }
 
 .welcome-card-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
-}
-
-.welcome-card-title {
-  font-size: 75px;
+  font-size: 50px;
 }
 
 .welcome-card-actions {
@@ -37,5 +25,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.buttons {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.mat-card {
+  width: 300px;
 }
 /*# sourceMappingURL=welcome-page.component.css.map */

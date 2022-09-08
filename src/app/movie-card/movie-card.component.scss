@@ -1,0 +1,100 @@
+.movie-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #6b1515;
+}
+  
+.mat-card-container {
+    max-width: 285px;
+    margin: 2rem 1rem;
+    height: 565px;
+    text-align: center;
+    min-width: 400px;
+}
+  
+.mat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 2%;
+    background-color: #fdf3e6;
+    max-width: fit-content;
+    // max-height: fit-content;
+    border: none;
+    padding: 20px;
+}
+
+.mat-card-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+//allo
+
+.directedBy {
+    color: #000000;
+    font-size: 24px;
+}
+
+.genre {
+    color: #000000;
+    font-size: 24px;
+}
+.img {
+    width: 100%;
+    height: 70%;
+    margin: auto;
+}
+  
+.movie-btn {
+    background-color: black;
+    color: #f09f9f;
+    padding: 1rem;
+}
+
+.buttons {
+    margin-left: 36px;
+    margin-bottom: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+}
+
+.syn-fav-buttons {
+    display: flex;
+    justify-content: space-around;
+
+}
+.synopsis-button {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.synopsis-button:hover {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.favorite-button {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(255, 122, 122);
+}
+
+.favorite-button:hover {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(248, 69, 69);
+    background-color: transparent;
+}

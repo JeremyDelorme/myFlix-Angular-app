@@ -16,16 +16,18 @@
         <!-- Edit Profile Information & Delete Profile -->
         <mat-card-actions class="user-profile-actions">
 
-            <button mat-raised-button (click)="openEditProfileDialog()">
-                <mat-icon>edit</mat-icon>
-                Edit Profile
-            </button>
-            <button class="delete-profile-button" mat-raised-button (click)="deleteProfile()">
-                <mat-icon>delete_forever</mat-icon>
-                Delete Profile
-            </button>
+            <mat-card-actions class="profile-actions">
 
-        </mat-card-actions>
+                <button mat-raised-button (click)="openEditProfileDialog()">
+                    <mat-icon class="edit-profile-button">edit</mat-icon>
+                    Edit Profile
+                </button>
+                <button class="delete-profile-button" mat-raised-button (click)="deleteProfile()">
+                    <mat-icon>delete_forever</mat-icon>
+                    Delete Profile
+                </button>
+
+            </mat-card-actions>
     </mat-card>
 
     <!-- Display Favorite Movies -->
