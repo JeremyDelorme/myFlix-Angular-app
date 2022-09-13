@@ -37,9 +37,6 @@
   position: relative;
   border-radius: 2%;
   background-color: #fdf3e6;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
   border: none;
   padding: 20px;
 }
